@@ -283,4 +283,8 @@ class SalleCinema:
         self.conn.close()
         
         
+<<<<<<< HEAD
     
+=======
+        #testing
+>>>>>>> 0952c82234d66f70e4049d9ef18f5f48069ec9ae
