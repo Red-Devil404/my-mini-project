@@ -11,8 +11,8 @@ class PeopleList:
     def __init__(self):
         self.conn = mysql.connector.connect(
             host="localhost",
-            user="username",
-            password="password",
+            user="root",
+            password="",
             database="people_db"
         )
         self.cursor = self.conn.cursor()
@@ -70,8 +70,8 @@ class QueueWait:
     def __init__(self):
         self.conn = mysql.connector.connect(
             host="localhost",
-            user="username",
-            password="password",
+            user="root",
+            password="",
             database="people_db"
         )
         self.cursor = self.conn.cursor()
@@ -100,8 +100,8 @@ class QueueWait:
         # Initialize the connection to the database
         self.conn = mysql.connector.connect(
             host="localhost",
-            user="username",
-            password="password",
+            user="root",
+            password="",
             database="people_db"
         )
         self.cursor = self.conn.cursor()
@@ -148,8 +148,8 @@ class SalleCinema:
         # Initialize the connection to the database
         self.conn = mysql.connector.connect(
             host="localhost",
-            user="username",
-            password="password",
+            user="root",
+            password="",
             database="people_db"
         )
         self.cursor = self.conn.cursor()
@@ -182,8 +182,8 @@ class SalleCinema:
         # Initialize the connection to the database
         self.conn = mysql.connector.connect(
             host="localhost",
-            user="username",
-            password="password",
+            user="root",
+            password="",
             database="people_db"
         )
         self.cursor = self.conn.cursor()
@@ -218,8 +218,8 @@ class SalleCinema:
         # Initialize the connection to the database
         self.conn = mysql.connector.connect(
             host="localhost",
-            user="username",
-            password="password",
+            user="root",
+            password="",
             database="people_db"
         )
         self.cursor = self.conn.cursor()
@@ -243,8 +243,8 @@ class SalleCinema:
         # Initialize the connection to the database
         self.conn = mysql.connector.connect(
             host="localhost",
-            user="username",
-            password="password",
+            user="root",
+            password="",
             database="people_db"
         )
         self.cursor = self.conn.cursor()
@@ -262,8 +262,8 @@ class SalleCinema:
         # Initialize the connection to the database
         self.conn = mysql.connector.connect(
             host="localhost",
-            user="username",
-            password="password",
+            user="root",
+            password="",
             database="people_db"
         )
         self.cursor = self.conn.cursor()
@@ -283,8 +283,4 @@ class SalleCinema:
         self.conn.close()
         
         
-<<<<<<< HEAD
     
-=======
-        #testing
->>>>>>> 0952c82234d66f70e4049d9ef18f5f48069ec9ae
