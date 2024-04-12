@@ -15,7 +15,11 @@ When you have completed a feature or part of the project, push to the branch (us
 
 
 ******Guides******:
-Just download the both python files database.py and main.py , open xamp and then phpmyadmin localhost and then make the database named people_db and run the script ->command to write by cmd-> python main.py
+Just download the both python files database.py and main.py , open xamp and then phpmyadmin localhost and then make the database named people_db and make a table for people and its columns as id,name, age 
+make a table for fileanttente and its columns as id,name, priority 
+make a table for reservations and its columns as id,name, place, place_type
+and then 
+run the script ->command to write by cmd-> python main.py
 
 
 
