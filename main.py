@@ -1,6 +1,6 @@
 from database import PeopleList
 
-###### PART1 ######
+  ###### PART1 ######
 
 people_list = PeopleList()
 
@@ -56,10 +56,7 @@ cinema.reserver_place("John Doe", "A1")
 cinema.display_reserved_places()
 
 
-
-
-
-###### PART2 ######
+      ###### PART2 ######
 
 from database import SalleCinema
 

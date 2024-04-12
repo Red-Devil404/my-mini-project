@@ -14,6 +14,10 @@ When you have completed a feature or part of the project, push to the branch (us
 • Push your code to your personal Git repository on the branch (usually main or master).
 
 
+******Guides******:
+Just download the both python files database.py and main.py , open xamp and then phpmyadmin localhost and then make the database named people_db and run the script ->command to write by cmd-> python main.py
+
+
 
 **Part1**
 

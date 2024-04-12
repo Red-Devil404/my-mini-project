@@ -95,16 +95,6 @@ class QueueWait:
             print("Queue is empty")
 
 
-class QueueWait:
-    def __init__(self):
-        # Initialize the connection to the database
-        self.conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="",
-            database="people_db"
-        )
-        self.cursor = self.conn.cursor()
 
     def add_priority_person(self, name):
         # Add a priority person to the queue in the database
@@ -177,32 +167,22 @@ class SalleCinema:
 
 ###### PART2 ######
 
-class SalleCinema:
-    def __init__(self):
-        # Initialize the connection to the database
-        self.conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="",
-            database="people_db"
-        )
-        self.cursor = self.conn.cursor()
-
     def number_places_available(self):
-        # Display the number of available seats by consulting the Reservations table
+        # Query the database to get the number of reserved places
         sql_select_query = "SELECT COUNT(*) FROM Reservations"
         self.cursor.execute(sql_select_query)
         total_reservations = self.cursor.fetchone()[0]
         total_seats = 100  # Assuming there are 100 seats in the cinema
         available_seats = total_seats - total_reservations
         print("Number of available seats:", available_seats)
+        return available_seats
 
     def reserver_place(self, name, place):
-        # Check if there are still places available in the room
-        self.number_places_available()
+        # Check the number of available seats
+        available_seats = self.number_places_available()
 
         # Reserve a place for a person if there are available seats
-        if self.number_places_available > 0:
+        if available_seats > 0:
             sql_insert_query = "INSERT INTO Reservations (name, place) VALUES (%s, %s)"
             reservation_data = (name, place)
             self.cursor.execute(sql_insert_query, reservation_data)
@@ -210,19 +190,7 @@ class SalleCinema:
             print("Reservation successful!")
         else:
             print("No available seats. Reservation failed.")
-
-
-
-class SalleCinema:
-    def __init__(self):
-        # Initialize the connection to the database
-        self.conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="",
-            database="people_db"
-        )
-        self.cursor = self.conn.cursor()
+            
 
     def filter_reservations_by_person(self, name):
         # Display reservations made by a specific person
@@ -238,17 +206,6 @@ class SalleCinema:
 
 
 
-class SalleCinema:
-    def __init__(self):
-        # Initialize the connection to the database
-        self.conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="",
-            database="people_db"
-        )
-        self.cursor = self.conn.cursor()
-
     def cancel_reservation(self, name):
         # Cancel all reservations made by a specific person
         sql_delete_query = "DELETE FROM Reservations WHERE name = %s"
@@ -257,16 +214,6 @@ class SalleCinema:
         print("Reservations cancelled for", name)
 
 
-class SalleCinema:
-    def __init__(self):
-        # Initialize the connection to the database
-        self.conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="",
-            database="people_db"
-        )
-        self.cursor = self.conn.cursor()
 
     def reserver_place_speciale(self, name):
         # Reserve a special place for a disabled person
